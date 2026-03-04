@@ -9,36 +9,29 @@ export const metadata = {
   title: "Pricing",
 };
 
-const tiers = [
+const core = {
+  name: "Membership",
+  price: "Custom",
+  desc: "Card-based rails for ad spend, built for teams scaling volume.",
+  bullets: [
+    "Credit-card spend across channels",
+    "Cashback up to 2.5% (available starting Apr 1)",
+    "Onboarding + support",
+  ],
+};
+
+const addons = [
   {
-    name: "Starter",
-    price: "Custom",
-    desc: "For teams getting card-based rails and cashback set up.",
-    bullets: [
-      "Credit-card-friendly payments",
-      "Cashback on eligible spend",
-      "Core onboarding + support",
-    ],
+    name: "Credit line options",
+    desc: "Increase cash flow so you can scale when performance is working.",
   },
   {
-    name: "Scale",
-    price: "Custom",
-    desc: "For teams actively scaling and optimizing cash flow.",
-    bullets: [
-      "Higher volume support",
-      "Operational tooling & reporting",
-      "Priority support",
-    ],
+    name: "Higher-volume ops",
+    desc: "For teams managing larger budgets and needing tighter reconciliation.",
   },
   {
-    name: "Scale + Financing",
-    price: "Custom",
-    desc: "For teams that want optional financing to increase cash flow.",
-    bullets: [
-      "Everything in Scale",
-      "Financing (optional, subject to approval)",
-      "Faster scaling with bigger cash flow",
-    ],
+    name: "Priority support",
+    desc: "Faster response times and hands-on help for paid media ops.",
   },
 ];
 
@@ -53,40 +46,60 @@ export default function PricingPage() {
           subtitle="We keep pricing simple and aligned with your volume and setup. If you want credit-card-based cashback and the option for financing, 8bridge is built for you."
         />
 
-        <SectionShell className="bg-8bg2" >
-          <div id="pricing" className="grid gap-5 md:grid-cols-3">
-            {tiers.map((t, idx) => (
-              <div
-                key={t.name}
-                className={`rounded-2xl border border-8border/60 bg-white/3 p-7 ${
-                  idx === 1 ? "bg-white/5" : ""
-                }`}
-              >
-                <div className="font-display text-xs tracking-[0.18em] uppercase text-8muted">
-                  {t.name}
-                </div>
-                <div className="mt-3 font-display text-3xl text-8text">{t.price}</div>
-                <p className="mt-2 text-sm leading-6 text-8muted">{t.desc}</p>
-                <ul className="mt-5 space-y-2 text-sm text-8muted">
-                  {t.bullets.map((b) => (
-                    <li key={b} className="flex gap-2">
-                      <span className="mt-[2px]">•</span>
-                      <span>{b}</span>
-                    </li>
-                  ))}
-                </ul>
+        <SectionShell className="bg-8bg2">
+          <div id="pricing" className="grid gap-6 md:grid-cols-12">
+            <div className="rounded-3xl border border-8border/60 bg-white/5 p-8 md:col-span-7">
+              <div className="font-display text-xs tracking-[0.18em] uppercase text-8muted">
+                {core.name}
+              </div>
+              <div className="mt-3 font-display text-4xl text-8text">{core.price}</div>
+              <p className="mt-2 max-w-xl text-sm leading-6 text-8muted">{core.desc}</p>
+
+              <ul className="mt-6 grid gap-2 text-sm text-8muted sm:grid-cols-2">
+                {core.bullets.map((b) => (
+                  <li key={b} className="flex gap-2">
+                    <span className="mt-[2px]">•</span>
+                    <span>{b}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:items-center">
                 <button
                   type="button"
                   disabled
-                  className="mt-7 inline-flex w-full cursor-not-allowed items-center justify-center rounded-full border border-8border/60 bg-8card px-5 py-3 text-sm font-medium text-8text/80 opacity-80"
+                  className="inline-flex cursor-not-allowed items-center justify-center rounded-full border border-8border/60 bg-8card px-6 py-3 text-sm font-medium text-8text/80 opacity-80"
                 >
                   Join now
                 </button>
-                <p className="mt-3 text-xs text-8muted">
-                  We’ll confirm eligibility, cashback mechanics, and (if needed) financing details.
+                <p className="text-xs text-8muted">
+                  Join is currently invite-only. We’ll confirm eligibility + cashback mechanics.
                 </p>
               </div>
-            ))}
+            </div>
+
+            <div className="rounded-3xl border border-8border/60 bg-white/3 p-8 md:col-span-5">
+              <div className="font-display text-xs tracking-[0.18em] uppercase text-8muted">
+                Add-ons
+              </div>
+              <h2 className="mt-3 font-display text-2xl text-8text">Scale when you’re ready.</h2>
+              <p className="mt-3 text-sm leading-6 text-8muted">
+                Add credit line options or higher-volume operations support as you grow.
+              </p>
+              <div className="mt-6 grid gap-3">
+                {addons.map((a) => (
+                  <div
+                    key={a.name}
+                    className="rounded-2xl border border-8border/60 bg-white/2 p-5"
+                  >
+                    <div className="font-display text-sm tracking-[0.14em] uppercase text-8text">
+                      {a.name}
+                    </div>
+                    <p className="mt-2 text-sm leading-6 text-8muted">{a.desc}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </SectionShell>
 

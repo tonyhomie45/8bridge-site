@@ -23,12 +23,12 @@ export default function HomePage() {
               Ads payments + cashback + financing
             </p>
             <h1 className="mt-5 max-w-3xl font-display text-4xl leading-[1.05] tracking-[-0.02em] text-8text md:text-6xl">
-              The only way to earn cashback with credit cards — and scale with bigger cash flow.
+              Pay ad spend with credit cards. Earn 2–2.5% cashback. Get a credit line.
             </h1>
             <p className="mt-6 max-w-2xl text-base leading-7 text-8muted md:text-lg">
-              8bridge helps performance teams run Meta, TikTok, and Google with credit cards to
-              unlock cashback — plus optional financing so you can push spend without starving your
-              runway.
+              8bridge is the only option built to run Meta, TikTok, and Google spend with cards —
+              unlocking cashback (available starting Apr 1) and credit line options so you can scale
+              with bigger cash flow.
             </p>
 
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
@@ -46,7 +46,22 @@ export default function HomePage() {
               </Link>
             </div>
 
-            <div className="mt-12 grid gap-3 rounded-2xl border border-8border/60 bg-white/3 p-5 text-sm text-8muted md:grid-cols-3">
+            <div className="mt-10 flex flex-wrap items-center gap-2 text-xs text-8muted">
+              <span className="rounded-full border border-8border/60 bg-white/3 px-3 py-1">
+                2–2.5% cashback (available Apr 1)
+              </span>
+              <span className="rounded-full border border-8border/60 bg-white/3 px-3 py-1">
+                Credit-card spend
+              </span>
+              <span className="rounded-full border border-8border/60 bg-white/3 px-3 py-1">
+                Credit line options
+              </span>
+              <span className="rounded-full border border-8border/60 bg-white/3 px-3 py-1">
+                Meta · TikTok · Google
+              </span>
+            </div>
+
+            <div className="mt-10 grid gap-3 rounded-2xl border border-8border/60 bg-white/3 p-5 text-sm text-8muted md:grid-cols-3">
               <div>
                 <div className="font-display text-xs tracking-[0.18em] uppercase text-8text">
                   Credit cards
@@ -57,10 +72,10 @@ export default function HomePage() {
               </div>
               <div>
                 <div className="font-display text-xs tracking-[0.18em] uppercase text-8text">
-                  Financing
+                  Credit line options
                 </div>
                 <p className="mt-2 leading-6">
-                  Optional capital to increase cash flow and scale without waiting on payouts.
+                  Increase cash flow so you can scale without waiting on payout cycles.
                 </p>
               </div>
               <div>
@@ -139,11 +154,11 @@ export default function HomePage() {
                   },
                   {
                     t: "Faster scaling",
-                    d: "Financing can increase available cash flow when you’re ready to push.",
+                    d: "Credit line options can increase cash flow when you’re ready to push.",
                   },
                   {
                     t: "Channel coverage",
-                    d: "One setup across Meta, TikTok, and Google — with dedicated pages and playbooks.",
+                    d: "One setup across Meta, TikTok, and Google — with channel-specific best practices.",
                   },
                   {
                     t: "Simple onboarding",
@@ -160,6 +175,48 @@ export default function HomePage() {
                     <p className="mt-3 text-sm leading-6 text-8muted">{b.d}</p>
                   </div>
                 ))}
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-10 grid items-center gap-6 rounded-3xl border border-8border/60 bg-white/3 p-8 md:grid-cols-12 md:gap-10">
+            <div className="md:col-span-7">
+              <p className="font-display text-xs tracking-[0.22em] uppercase text-8muted">
+                Feature spotlight
+              </p>
+              <h3 className="mt-4 font-display text-2xl leading-tight text-8text md:text-3xl">
+                Cashback + cash flow, without changing how you run ads.
+              </h3>
+              <p className="mt-4 text-sm leading-6 text-8muted">
+                Keep your operational rhythm. We help you route spend through credit cards (cashback
+                available starting Apr 1) and offer credit line options so your winners can scale.
+              </p>
+              <div className="mt-6 flex flex-wrap gap-2 text-xs text-8muted">
+                <span className="rounded-full border border-8border/60 bg-white/2 px-3 py-1">
+                  Up to 2.5% cashback
+                </span>
+                <span className="rounded-full border border-8border/60 bg-white/2 px-3 py-1">
+                  Credit line options
+                </span>
+                <span className="rounded-full border border-8border/60 bg-white/2 px-3 py-1">
+                  Simple onboarding
+                </span>
+              </div>
+            </div>
+            <div className="md:col-span-5">
+              <div className="relative overflow-hidden rounded-2xl border border-8border/60 bg-gradient-to-b from-white/10 to-transparent p-10">
+                <div className="absolute inset-0 bg-grain opacity-[0.22]" />
+                <div className="relative flex items-center justify-center">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src="/brand/Logo/symbol-white.svg"
+                    alt="8bridge"
+                    className="h-24 w-24 opacity-90"
+                  />
+                </div>
+                <p className="relative mt-6 text-center text-xs leading-5 text-8muted">
+                  Card-based payments → cashback → credit line options.
+                </p>
               </div>
             </div>
           </div>

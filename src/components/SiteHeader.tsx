@@ -1,6 +1,8 @@
 import Link from "next/link";
 
 const nav = [
+  { href: "/#how", label: "How it works" },
+  { href: "/#faq", label: "FAQ" },
   { href: "/meta-ads", label: "Meta Ads" },
   { href: "/tiktok-ads", label: "TikTok Ads" },
   { href: "/google-ads", label: "Google Ads" },
