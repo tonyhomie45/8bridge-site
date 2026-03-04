@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #040e18; /* Infinite Blue */
+  --bg2: #09141f; /* Midnight */
+  --text: #e8ebf4; /* Ice Ivory */
+  --muted: color-mix(in oklab, var(--text) 70%, transparent);
+  --border: color-mix(in oklab, var(--text) 14%, transparent);
+  --card: color-mix(in oklab, var(--text) 6%, transparent);
+}
+
+@theme {
+  --color-8bg: var(--bg);
+  --color-8bg2: var(--bg2);
+  --color-8text: var(--text);
+  --color-8muted: var(--muted);
+  --color-8border: var(--border);
+  --color-8card: var(--card);
+
+  --font-sans: var(--font-nexa);
+  --font-display: var(--font-kurdis);
+}
+
+html,
+body {
+  height: 100%;
+}
+
+/* subtle grain */
+.bg-grain {
+  background-image: radial-gradient(
+      circle at 1px 1px,
+      rgba(232, 235, 244, 0.08) 1px,
+      transparent 0
+    ),
+    radial-gradient(circle at 3px 3px, rgba(232, 235, 244, 0.04) 1px, transparent 0);
+  background-size: 28px 28px;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.container {
+  margin-inline: auto;
+  width: 100%;
+  max-width: 1120px;
+  padding-inline: 1.25rem;
+}
+
+::selection {
+  background: rgba(232, 235, 244, 0.18);
+}
