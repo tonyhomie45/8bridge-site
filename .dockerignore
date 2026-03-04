@@ -1,0 +1,9 @@
+node_modules
+.next
+snapshots
+scripts
+.git
+.gitignore
+README-DEPLOY.md
+*.log
+.DS_Store
